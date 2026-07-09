@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Oréal Beauty Assistant</title>
+
+  <!-- Fonts: Playfair Display echoes L'Oréal's Didot-style logotype; Inter for readable chat text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- ============ HEADER / BRANDING ============ -->
+    <header class="site-header">
+      <img
+        src="img/loreal-logo.png"
+        alt="L'Oréal Paris"
+        class="brand-logo"
+        onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='block';"
+      />
+      <!-- Text logotype fallback if the image asset is missing -->
+      <h1 id="logoFallback" class="brand-logotype" style="display: none;">L'ORÉAL</h1>
+
+      <div class="gold-rule" aria-hidden="true"></div>
+      <p class="brand-tagline">Because You're Worth It</p>
+    </header>
+
+    <!-- ============ CHAT CARD ============ -->
+    <main class="chat-card">
+      <div class="chat-card-header">
+        <h2>Beauty Assistant</h2>
+        <p>Ask about L'Oréal products, routines &amp; recommendations</p>
+      </div>
+
+      <!-- Latest user question, shown above the response area -->
+      <div id="latestQuestion" class="latest-question" aria-live="polite"></div>
+
+      <!-- Conversation window -->
+      <div id="chatWindow" class="chat-window" aria-live="polite">
+        <div class="msg bot">
+          <p>
+            Bonjour! 👋 I'm your L'Oréal Beauty Assistant. Ask me about our
+            makeup, skincare, haircare, or fragrance — or tell me about your
+            routine and I'll recommend the right products for you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Input row -->
+      <form id="chatForm" class="chat-form" autocomplete="off">
+        <label for="userInput" class="visually-hidden">Your question</label>
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Ask about a product or routine…"
+          required
+        />
+        <button type="submit" id="sendBtn" aria-label="Send message">Send</button>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>Powered by OpenAI · Requests secured via Cloudflare Workers</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
