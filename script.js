@@ -85,7 +85,7 @@ chatForm.addEventListener("submit", async (e) => {
   try {
     // 4. Send the FULL history to the Cloudflare Worker.
     //    The worker attaches the secret API key and calls OpenAI.
-    const response = await fetch(OPENAI_API_TOKEN, {
+    const response = await fetch(WORKER_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ messages }),
