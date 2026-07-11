@@ -11,7 +11,7 @@
    Setup:
    1. Create a Worker in the Cloudflare dashboard.
    2. Paste this code in.
-   3. Settings → Variables → add secret: OPENAI_API_KEY
+   3. Settings → Variables → add secret: OPENAI_API_TOKEN
    4. Deploy, then copy the Worker URL into script.js.
    ===================================================== */
 
@@ -50,7 +50,7 @@ export default {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${env.OPENAI_API_KEY}`,
+            Authorization: `Bearer ${env.OPENAI_API_TOKEN}`,
           },
           body: JSON.stringify({
             model: "gpt-4o-mini",
