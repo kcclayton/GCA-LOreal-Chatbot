@@ -6,8 +6,8 @@
      to OpenAI, so the API key stays secret)
    ===================================================== */
 
-// 👉 Replace with YOUR deployed Cloudflare Worker URL
-const WORKER_URL = "https://loreal-chatbot.kcclayton.workers.dev";
+// 👉 Replace with the deployed Cloudflare Worker URL
+const WORKER_URL = "loreal-chatbot.kcclayton.workers.dev";
 
 // System prompt: keeps the bot on-brand and on-topic
 const SYSTEM_PROMPT = `You are the L'Oréal Beauty Assistant, a friendly and knowledgeable virtual advisor for L'Oréal.
