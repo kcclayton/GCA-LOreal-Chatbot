@@ -53,7 +53,7 @@ export default {
             Authorization: `Bearer ${env.OPENAI_API_TOKEN}`,
           },
           body: JSON.stringify({
-            model: "gpt-4o-mini",
+            model: "gpt-5",
             messages: messages,
             max_tokens: 400,
             temperature: 0.7,
