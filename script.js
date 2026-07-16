@@ -7,7 +7,7 @@
    ===================================================== */
 
 // 👉 Replace with YOUR deployed Cloudflare Worker URL
-const WORKER_URL = "http://loreal-chatbot.kcclayton.workers.dev";
+const WORKER_URL = "https://loreal-chatbot.kcclayton.workers.dev";
 
 // System prompt: keeps the bot on-brand and on-topic
 const SYSTEM_PROMPT = `You are the L'Oréal Beauty Assistant, a friendly and knowledgeable virtual advisor for L'Oréal.
