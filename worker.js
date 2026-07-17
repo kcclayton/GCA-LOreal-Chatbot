@@ -55,8 +55,7 @@ export default {
           body: JSON.stringify({
             model: "gpt-5",
             messages: messages,
-            max_tokens: 400,
-            temperature: 0.7,
+            max_completion_tokens: 2000,
           }),
         }
       );
