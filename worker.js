@@ -55,7 +55,7 @@ export default {
           body: JSON.stringify({
             model: "gpt-5",
             messages: messages,
-            max_completion_tokens: 2000,
+            max_completion_tokens: 6000,
           }),
         }
       );
